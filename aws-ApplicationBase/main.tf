@@ -63,6 +63,3 @@ resource "aws_route53_record" "demo" {
   records = ["${aws_eip.demo.public_ip}"]
 }
   
-output "demo_fqdn" {
-  value = "${aws_route53_record.demo.fqdn}"
-}
