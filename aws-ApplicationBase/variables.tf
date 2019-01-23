@@ -44,3 +44,7 @@ variable "domain_root" {
 variable "WORKSPACE_TTL" {
   description = "TTL of how long workspace should stick around"
 }
+
+variable "namespace" {
+    description = "unique name for demo"
+}
