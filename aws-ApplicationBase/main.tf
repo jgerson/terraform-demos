@@ -33,14 +33,4 @@ module "ec2" {
   }
 }
 
-data "aws_route53_zone" "selected" {
-  name = "${var.domain_root}."
-}
 
-resource "aws_route53_record" "www" {
-  zone_id = "${data.aws_route53_zone.selected.zone_id}"
-  name    = "${var.application_name}.${var.domain_root}"
-  type    = "A"
-  ttl     = "300"
-  records = ["${element(module.ec2.public_ip, 0)}"]
-}
