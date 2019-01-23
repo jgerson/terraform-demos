@@ -10,6 +10,10 @@ data "terraform_remote_state" "networkdetails" {
   }
 }
 
+data "aws_route53_zone" "hashidemos" {
+  name = "hashidemos.io."
+}
+
 module "ec2" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "1.3.0"
@@ -75,7 +79,7 @@ resource "aws_eip" "demo" {
 }
 
 resource "aws_route53_record" "demo" {
-  zone_id = "${var.hashidemos_zone_id}"
+  zone_id = "${data.aws_route53_zone.hashidemos.zone_id}"
   name    = "${local.namespace}.hashidemos.io."
   type    = "A"
   ttl     = "300"
