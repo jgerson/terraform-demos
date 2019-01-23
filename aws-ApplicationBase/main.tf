@@ -6,7 +6,7 @@ data "terraform_remote_state" "networkdetails" {
   backend = "atlas"
 
   config {
-    name = "azc/${var.network_workspace}"
+    name = "jgersonorg1/${var.network_workspace}"
   }
 }
 
