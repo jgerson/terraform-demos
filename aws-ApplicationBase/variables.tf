@@ -15,7 +15,7 @@ variable "application_name" {
 
 variable "ami_id" {
   description = "AMI for launch"
-  default     = "ami-aa2ea6d0"
+  default     = "ami-0ad99772"
 }
 
 variable "owner" {
