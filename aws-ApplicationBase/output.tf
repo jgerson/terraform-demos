@@ -1,3 +1,3 @@
-output "public_ips" {
-  value = "${module.ec2.public_ip}"
+output "demo_fqdn" {
+  value = "${aws_route53_record.demo.fqdn}"
 }
