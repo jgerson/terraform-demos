@@ -17,7 +17,7 @@ module "vpc" {
   tags = {
     Terraform   = "true"
     Environment = "${var.environment}"
-    Owner       = "Adam"
+    Owner       = "Jeremy"
   }
 }
 
@@ -46,7 +46,7 @@ module "security_group" {
   egress_rules = ["all-all"]
 
   tags = {
-    Name        = "Adam"
+    Name        = "Jeremy"
     Environment = "${var.environment}"
   }
 }
