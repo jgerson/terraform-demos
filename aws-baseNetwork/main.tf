@@ -46,7 +46,7 @@ module "security_group" {
   egress_rules = ["all-all"]
 
   tags = {
-    Name        = "Jeremy"
+    Name        = "jgerson@hashicorp.com"
     Environment = "${var.environment}"
   }
 }
