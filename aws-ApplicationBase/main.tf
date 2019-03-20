@@ -33,7 +33,7 @@ cat << EOM > /var/www/html/index.html
   <head><title>Meow!</title></head>
   <body>
   <center><img src="http://placekitten.com/600/400"></img></center>
-  <center><h1>Meow World!!!</h1></center>
+  <center><h1>Meow World!!!!!</h1></center>
   </body>
 </html>
 EOM
@@ -46,7 +46,7 @@ EOF
 
   tags {
     Name  = "${local.namespace}-instance"
-    owner = "${var.owner}"
+    Owner = "${var.owner}"
     TTL   = "${var.ttl}"
   }
 }
