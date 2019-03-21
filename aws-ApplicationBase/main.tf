@@ -46,7 +46,7 @@ EOF
 
   tags {
     Name  = "${local.namespace}-instance"
-    Owner = "${var.owner}"
+    owner = "${var.owner}"
     TTL   = "${var.ttl}"
   }
 }
